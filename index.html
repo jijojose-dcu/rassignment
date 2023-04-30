@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Jijo Jose">
 
 <title>DCU - UNICEF R Dashboard</title>
 <style>
@@ -34,6 +35,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="RJijo_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="RJijo_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
+<script src="RJijo_files/libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="RJijo_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
 
 </head>
 
@@ -52,6 +56,12 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Jijo Jose </p>
+          </div>
+  </div>
     
   
     
@@ -64,6 +74,8 @@ ul.task-list li input[type="checkbox"] {
 <section id="unicef-indicator-proportion-of-students-achieving-minimum-proficiency-in-reading" class="level1">
 <h1>UNICEF Indicator: Proportion of students achieving minimum proficiency in reading</h1>
 <p><strong>Education</strong> is a fundamental right, and ensuring that students achieve a minimum proficiency level in reading is crucial for their personal and professional development. This report examines the proportion of students at the end of lower secondary education who achieved at least a minimum proficiency level in reading, based on the <strong>Proportion of students achieving minimum proficiency in reading</strong> data. The visualizations below provide insights into the performance of various countries and the relationship between education outcomes and economic development.</p>
+<p>The datasource can be found <a href="https://data.unicef.org/resources/resource-type/datasets/">here</a></p>
+<p><img src="edu.jpg" class="img-fluid"></p>
 </section>
 <section id="contents" class="level1">
 <h1>Contents</h1>
@@ -75,7 +87,7 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <section id="world-map-proportion-of-students-achieving-minimum-proficiency-in-reading-by-country" class="level2">
 <h2 class="anchored" data-anchor-id="world-map-proportion-of-students-achieving-minimum-proficiency-in-reading-by-country">World Map: Proportion of students achieving minimum proficiency in reading by country</h2>
-<p>The world map chart below provides a global overview of the proportion of students achieving at least a minimum proficiency level in reading at the end of lower secondary education. The color intensity represents the proportion of students achieving the minimum reading proficiency, with darker shades indicating higher proportions. This visualization helps identify regional trends and disparities in education outcomes.</p>
+<p>The world map chart below provides a global overview of the proportion of students achieving at least a minimum proficiency level in reading at the end of lower secondary education. The color intensity represents the proportion of students achieving the minimum reading proficiency, with darker shades indicating higher proportions. This visualization helps identify <strong>regional trends and disparities in education outcomes</strong>.</p>
 <div class="cell">
 <div class="cell-output-display">
 <p><img src="RJijo_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
@@ -108,16 +120,92 @@ ul.task-list li input[type="checkbox"] {
 <section id="time-series-chart-top-10-countries-with-the-highest-average-gni" class="level2">
 <h2 class="anchored" data-anchor-id="time-series-chart-top-10-countries-with-the-highest-average-gni">Time-series chart: Top 10 countries with the highest average GNI</h2>
 <p>The <strong><em>time-series chart</em></strong> below shows the trend of the Gross National Income (GNI) per capita for the top 10 countries with the highest average GNI over the available years. Each line represents a country and is displayed in a different color, with the legend indicating the corresponding country. This visualization helps us understand the economic growth of these high-income countries and compare their progress over time.</p>
-<p>Key insights from the time-series chart: -The <strong>top 10 countries</strong> with the <strong>highest GNI|</strong> have seen varying degrees of growth over the years. -Some countries have experienced more significant economic growth than others. -Understanding the factors contributing to the economic growth of these countries could inform <strong><em>policy-making</em></strong> in other nations.</p>
+<p>Key insights from the time-series chart:</p>
+<ul>
+<li>The <strong>top 10 countries</strong> with the <strong>highest GNI|</strong> have seen varying degrees of growth over the years.</li>
+<li>Some countries have experienced more significant economic growth than others.</li>
+<li>Understanding the factors contributing to the economic growth of these countries could inform <strong><em>policy-making</em></strong> in other nations.</li>
+</ul>
 <div class="cell">
 <div class="cell-output-display">
 <p><img src="RJijo_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section>
+<section id="list-of-countries-with-the-highes-gni-as-of-2019" class="level2">
+<h2 class="anchored" data-anchor-id="list-of-countries-with-the-highes-gni-as-of-2019">List of countries with the highes GNI as of 2019</h2>
+<div class="cell">
+<div class="cell-output-display">
+
+<table class="table table-striped table table-striped table-hover table-responsive" style="margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:center;"> Country </th>
+   <th style="text-align:center;"> GNI </th>
+   <th style="text-align:center;"> Rank </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:center;"> United States </td>
+   <td style="text-align:center;"> 21,764,540,000,000 </td>
+   <td style="text-align:center;"> 1 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> China </td>
+   <td style="text-align:center;"> 14,239,930,000,000 </td>
+   <td style="text-align:center;"> 2 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> Japan </td>
+   <td style="text-align:center;"> 5,323,445,000,000 </td>
+   <td style="text-align:center;"> 3 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> Germany </td>
+   <td style="text-align:center;"> 4,019,078,000,000 </td>
+   <td style="text-align:center;"> 4 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> India </td>
+   <td style="text-align:center;"> 2,804,314,000,000 </td>
+   <td style="text-align:center;"> 5 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> United Kingdom </td>
+   <td style="text-align:center;"> 2,855,884,000,000 </td>
+   <td style="text-align:center;"> 6 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> France </td>
+   <td style="text-align:center;"> 2,787,417,000,000 </td>
+   <td style="text-align:center;"> 7 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> Brazil </td>
+   <td style="text-align:center;"> 1,822,981,000,000 </td>
+   <td style="text-align:center;"> 8 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> Italy </td>
+   <td style="text-align:center;"> 2,028,351,000,000 </td>
+   <td style="text-align:center;"> 9 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> Canada </td>
+   <td style="text-align:center;"> 1,719,639,000,000 </td>
+   <td style="text-align:center;"> 10 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
 <p>The visualizations in this report provide insights into the educational landscape and the relationship between economic development and education outcomes. While the data reveals some correlations between GNI and the proportion of students achieving minimum proficiency in reading, it is crucial to consider other factors that could impact education outcomes. Policymakers and stakeholders must work together to address the challenges faced by low-income countries and ensure that all students have access to quality education.</p>
+<p><img src="campus_img6.jpg" class="img-fluid"></p>
 </section>
 </section>
 
