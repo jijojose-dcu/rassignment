@@ -1,5 +1,6 @@
 ---
 title: "DCU - UNICEF R Dashboard "
+author: "Jijo Jose"
 output:
   html_document:
     echo: false
@@ -24,7 +25,9 @@ format:
 
 **Education** is a fundamental right, and ensuring that students achieve a minimum proficiency level in reading is crucial for their personal and professional development. This report examines the proportion of students at the end of lower secondary education who achieved at least a minimum proficiency level in reading, based on the **Proportion of students achieving minimum proficiency in reading** data. The visualizations below provide insights into the performance of various countries and the relationship between education outcomes and economic development.
 
+The datasource can be found [here](https://data.unicef.org/resources/resource-type/datasets/)
 
+![](edu.jpg)
 
 # Contents
 
@@ -37,7 +40,9 @@ format:
 
 ## World Map: Proportion of students achieving minimum proficiency in reading by country
 
-The world map chart below provides a global overview of the proportion of students achieving at least a minimum proficiency level in reading at the end of lower secondary education. The color intensity represents the proportion of students achieving the minimum reading proficiency, with darker shades indicating higher proportions. This visualization helps identify regional trends and disparities in education outcomes.
+The world map chart below provides a global overview of the proportion of students achieving at least a minimum proficiency level in reading at the end of lower secondary education. The color intensity represents the proportion of students achieving the minimum reading proficiency, with darker shades indicating higher proportions. This visualization helps identify **regional trends and disparities in education outcomes**.
+
+
 
 ```{r}
 #| echo: false
@@ -50,6 +55,8 @@ library(ggplot2)
 library(dplyr)
 library(sf)
 library(rworldmap)
+library(knitr)
+library(kableExtra)
 
 # Load data
 indicator_1 <- read.csv("unicef_indicator_1.csv")
@@ -138,9 +145,13 @@ print(scatter_plot)
 The ***time-series chart*** below shows the trend of the Gross National Income (GNI) per capita for the top 10 countries with the highest average GNI over the available years. Each line represents a country and is displayed in a different color, with the legend indicating the corresponding country. This visualization helps us understand the economic growth of these high-income countries and compare their progress over time.
 
 Key insights from the time-series chart: 
--The **top 10 countries** with the **highest GNI|** have seen varying degrees of growth over the years. 
--Some countries have experienced more significant economic growth than others. 
--Understanding the factors contributing to the economic growth of these countries could inform ***policy-making*** in other nations.
+
+- The **top 10 countries** with the **highest GNI|** have seen varying degrees of growth over the years. 
+- Some countries have experienced more significant economic growth than others. 
+- Understanding the factors contributing to the economic growth of these countries could inform ***policy-making*** in other nations.
+
+
+
 
 ```{r}
 # Time-series chart for top 10 countries with different colors for each country
@@ -153,7 +164,21 @@ print(time_series_chart)
 
 
 
+## List of countries with the highes GNI as of 2019
 
+```{r}
+gni_data <- data.frame(
+  Country = c("United States", "China", "Japan", "Germany", "India", "United Kingdom", "France", "Brazil", "Italy", "Canada"),
+  GNI = c("21,764,540,000,000", "14,239,930,000,000", "5,323,445,000,000", "4,019,078,000,000", "2,804,314,000,000", "2,855,884,000,000", "2,787,417,000,000", "1,822,981,000,000", "2,028,351,000,000", "1,719,639,000,000"),
+  Rank = 1:10
+)
+
+gni_table <- kable(gni_data, format = "html", table.attr = 'class="table table-striped"', align = "c") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "responsive"))
+gni_table
+```
 ## Conclusion
 
 The visualizations in this report provide insights into the educational landscape and the relationship between economic development and education outcomes. While the data reveals some correlations between GNI and the proportion of students achieving minimum proficiency in reading, it is crucial to consider other factors that could impact education outcomes. Policymakers and stakeholders must work together to address the challenges faced by low-income countries and ensure that all students have access to quality education.
+
+![](campus_img6.jpg)
